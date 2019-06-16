@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir docs"
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@types/moment": "^2.13.0",
