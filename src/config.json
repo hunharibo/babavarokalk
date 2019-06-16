@@ -1,0 +1,17 @@
+{
+    "SubsidizedInterestRate": 2,
+    "NoChildrenInterestRate": 5,
+    "AKK": 2.1,
+    "AKKmultiplier": 1.3,
+    "ChildMustBeBornBy": 60,
+    "365correction": true,
+    "365correctionOnSubsidy": false,
+    "SecondChildPrincipalSubsidy": 0.3,
+    "ThirdChildPrincipalSubsidy": 1,
+    "GuaranteeFeeRate": 0.5,
+    "GuaranteeFeeBase": 1,
+    "SuspensionDuration": 36,
+    "MaxTerm": 240,
+    "MaxProlongedTerm": 276,
+    "APRCalcMode":"firstdaily"
+}
