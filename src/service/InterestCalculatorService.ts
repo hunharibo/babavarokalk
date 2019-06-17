@@ -26,9 +26,8 @@ export default class InterestCalculatorService {
         if (duedate.TermNumber <= Globals.ChildMustBeBornBy || duedate.OwnerLoan.ChildrenBirthTermNumbers.length > 0) {
             duedate.PaymentType = LoanPaymentType.NoInterest;
             //kamattámogatás itt van kerekítve!!!
-            if(!Globals["365correctionOnSubsidy"]){
-                const correction = new Decimal(1).times(360).dividedBy(365);
-                duedate.InterestSubsidy = duedate.OwnerLoan.DueDates[duedate.TermNumber - 1].Balance.times(finalsubsidizedinterestrate.times(correction).dividedBy(365).dividedBy(100).times(duedate.DaysSince)).toDecimalPlaces(0);
+            if(Globals["SubsidyDiv360"]){
+                duedate.InterestSubsidy = duedate.OwnerLoan.DueDates[duedate.TermNumber - 1].Balance.times(finalsubsidizedinterestrate.dividedBy(360).dividedBy(100).times(duedate.DaysSince)).toDecimalPlaces(0);
             }
             else duedate.InterestSubsidy = duedate.OwnerLoan.DueDates[duedate.TermNumber - 1].Balance.times(finalsubsidizedinterestrate.dividedBy(365).dividedBy(100).times(duedate.DaysSince)).toDecimalPlaces(0);
         }

@@ -5,7 +5,7 @@
     "AKKmultiplier": 1.3,
     "ChildMustBeBornBy": 60,
     "365correction": true,
-    "365correctionOnSubsidy": false,
+    "SubsidyDiv360": true,
     "SecondChildPrincipalSubsidy": 0.3,
     "ThirdChildPrincipalSubsidy": 1,
     "GuaranteeFeeRate": 0.5,

@@ -30,7 +30,7 @@ export default class Loan {
     }
 
     public PaintRepresentativeExample(targetelement: HTMLElement) {
-        let fullcost:number = 0;
+        let fullcost: number = 0;
         this.DueDates.forEach(duedate => {
             fullcost += duedate.Instalment.plus(duedate.GuaranteeFee).toDecimalPlaces(0).toNumber();
         });
@@ -94,7 +94,9 @@ export default class Loan {
         const tbody = document.getElementById("tablebody");
         if (tbody) {
             this.DueDates.forEach(element => {
-                tbody.insertAdjacentHTML('beforeend', element.HTMLstring);
+                if (this.EarlyClosureInTermNumber === undefined || 
+                    this.EarlyClosureInTermNumber <= 0 || 
+                    element.TermNumber <= this.EarlyClosureInTermNumber) tbody.insertAdjacentHTML('beforeend', element.HTMLstring);
             });
         }
     }

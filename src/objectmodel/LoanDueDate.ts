@@ -116,6 +116,13 @@ export default class LoanDueDate {
             this.Interest = new Decimal(0);
             this.OwnerLoan.EarlyClosureInTermNumber = this.TermNumber;
         }
+        //Előtörlesztés utáni időszakot ki kell nullázni, itt már nem él a hitel.
+        if(this.OwnerLoan.EarlyClosureInTermNumber && this.OwnerLoan.EarlyClosureInTermNumber>0){
+            this.Instalment = new Decimal(0);
+            this.Principal = new Decimal(0);
+            this.Balance = new Decimal(0);
+            this.Interest = new Decimal(0);
+        }
         //Ha még van tartozás, akkor számolunk
         else this.CalcDueDate();
 
