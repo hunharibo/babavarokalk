@@ -5,8 +5,9 @@
         "outDir": "bin",
         "removeComments": true,
         "resolveJsonModule": true,
+        "moduleResolution": "node",
         "esModuleInterop": true,
-        "lib": ["dom", "es5", "es2015.promise"]
+        "lib": ["dom", "es5", "es2015.promise", "webworker", "webworker.importscripts"]
     },
     "include": [
         "src/**/*"

@@ -4,6 +4,17 @@ export enum LoanPaymentType {
     NoInterest = "Kamatmentes"
 }
 
+export interface IThreadMessage {
+    LoanAmount: string;
+    Term: string;
+    APR: string;
+    FirstInstalment: string;
+    LastInstalment: string;
+    MostCommonInstalment: string;
+    FullCost: string;
+    LoanCost: string;
+}
+
 export enum AprCalcMode {
     FirstDaily = "firstdaily",
     AllDaily = "alldaily",
