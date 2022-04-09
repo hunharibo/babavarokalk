@@ -9,7 +9,7 @@
     "date-holidays": "^1.4.0",
     "decimal.js": "^10.2.0",
     "financejs": "^4.1.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "scripts": {
     "dev": "parcel src/index.html",
